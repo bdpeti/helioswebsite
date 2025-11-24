@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOS // PRODUCT PREVIEW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="antialiased selection:bg-[#FF9E00] selection:text-black bg-[#050406] text-[#f0f0f0]">
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="noise"></div>
+
+    <!-- Navigation (Static Mock) -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-sm mix-blend-difference">
+        <div class="flex justify-between items-center px-4 py-4 md:px-8">
+            <div
+                class="text-2xl font-bold tracking-tighter font-syne text-[#FF9E00] hover:scale-110 transition-transform cursor-none-target">
+                HELIOS</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="/index.html" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Webshop</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Blog</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Rólunk</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/preview_cart.html"
+                    class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target">KOSÁR
+                    (1)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Product Section (Static Mock) -->
+    <div class="min-h-screen pt-24 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                <!-- Images -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div
+                        class="relative w-full aspect-square border border-white/10 overflow-hidden group cursor-none-target">
+                        <img src="https://images.unsplash.com/photo-1599446786801-447a1184a446?q=80&w=1200"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute bottom-4 left-4 font-mono text-xs text-[#FF9E00] opacity-0 group-hover:opacity-100 transition-opacity">
+                            IMG_ID: 8842 // RES: HIGH</div>
+                    </div>
+                    <div class="mt-12 border border-white/10 p-6 bg-[#0a0a0a]">
+                        <h3 class="font-mono text-[#FF9E00] uppercase mb-4 text-sm">>> FELHASZNÁLÓI_VISSZAJELZÉSEK.LOG
+                        </h3>
+                        <div class="space-y-4 font-mono text-xs text-gray-400">
+                            <div class="border-b border-white/5 pb-2">
+                                <div class="flex justify-between mb-1"><span class="text-white">USER_342</span><span
+                                        class="text-[#CCFF00]">VERIFIED</span></div>
+                                <p>"Brutális tapadás, a lunarok szinte maguktól megállnak."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="lg:col-span-5 relative">
+                    <div class="lg:sticky lg:top-32 space-y-8">
+                        <div class="border-b border-white/20 pb-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-[#CCFF00] text-black text-xs px-2 py-1 font-bold font-mono">ÚJ
+                                    DROP</span>
+                                <span class="font-mono text-xs text-gray-400">SKU: HLS-V2-PRO</span>
+                            </div>
+                            <h1 class="text-5xl md:text-7xl font-black font-syne uppercase leading-none mb-4 text-outline hover:text-[#FF9E00] transition-colors duration-300"
+                                style="-webkit-text-stroke-width: 2px;">HELIOS V2 PRO</h1>
+                            <div class="flex items-center gap-4">
+                                <span class="text-3xl font-mono font-bold text-[#FF9E00]">15 990 FT</span>
+                            </div>
+                        </div>
+
+                        <div class="font-mono text-sm text-gray-400 leading-relaxed border-l-2 border-[#FF9E00] pl-4">
+                            A legújabb fejlesztésünk. Tökéletes súlyelosztás, tapadós felület, brutális tartósság. Az
+                            utcára tervezve, profiknak építve.
+                        </div>
+
+                        <!-- Tech Specs Block -->
+                        <div class="border border-white/20 p-4 bg-[#111]">
+                            <h4 class="font-mono text-[#CCFF00] text-xs uppercase mb-4 border-b border-white/10 pb-2">
+                                TECHNIKAI_ADATOK</h4>
+                            <div class="grid grid-cols-2 gap-4 text-sm font-mono">
+                                <div><span class="text-gray-500 block text-xs">FAANYAG</span><span
+                                        class="text-white">Juhar / Kőris</span></div>
+                                <div><span class="text-gray-500 block text-xs">SÚLY</span><span
+                                        class="text-white">78g</span></div>
+                                <div><span class="text-gray-500 block text-xs">FESTÉS</span><span
+                                        class="text-white">Rubber</span></div>
+                                <div><span class="text-gray-500 block text-xs">FORMA</span><span
+                                        class="text-white">Helios V2</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Play Button Block -->
+                        <div class="py-4">
+                            <a href="#"
+                                class="flex items-center gap-4 group cursor-none-target w-full border border-white/20 p-4 hover:bg-white/5 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-[#FF9E00] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform text-black">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="currentColor" stroke="none">
+                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-syne font-bold uppercase text-lg">HALLGASD MEG A POP-OT</div>
+                                    <div class="font-mono text-xs text-gray-500">HANGMINTA LEJÁTSZÁSA</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <button
+                            class="w-full bg-[#FF9E00] text-black py-5 font-bold uppercase tracking-widest hover:bg-[#CCFF00] transition-colors shadow-[4px_4px_0px_0px_#ffffff] cursor-none-target relative overflow-hidden group">
+                            <span class="relative z-10">KOSÁRBA HELYEZÉS</span>
+                            <div
+                                class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 mix-blend-difference">
+                            </div>
+                        </button>
+
+                        <div class="border-t border-white/20 pt-6 space-y-4">
+                            <div class="group cursor-pointer">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span
+                                        class="font-mono text-sm uppercase text-gray-300 group-hover:text-[#FF9E00]">Szállítás
+                                        és Garancia</span>
+                                    <span class="text-[#FF9E00]">+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Static Mock) -->
+    <footer class="mt-20 border-t border-white/20 bg-[#0a0a0a] relative overflow-hidden">
+        <div class="container mx-auto px-4 py-20">
+            <div class="flex justify-between items-center text-xs text-gray-600 font-mono uppercase">
+                <div>© 2024 HELIOS KENDAMA.</div>
+                <div>GEN Z-NEK TERVEZVE</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

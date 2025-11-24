@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOS // CART PREVIEW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="antialiased selection:bg-[#FF9E00] selection:text-black bg-[#050406] text-[#f0f0f0]">
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-sm mix-blend-difference">
+        <div class="flex justify-between items-center px-4 py-4 md:px-8">
+            <div
+                class="text-2xl font-bold tracking-tighter font-syne text-[#FF9E00] hover:scale-110 transition-transform cursor-none-target">
+                HELIOS</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="/index.html" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Webshop</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/preview_cart.html"
+                    class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target">KOSÁR
+                    (1)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section (Static Mock) -->
+    <div class="container mx-auto px-4 py-24 min-h-screen" id="cart-container">
+        <h1 class="text-6xl font-black font-syne uppercase mb-12 text-outline glitch-text" data-text="KOSÁR">KOSÁR</h1>
+
+        <form action="#" method="post" novalidate id="cart-form" class="relative">
+            <div class="border-t border-white/20" id="cart-items">
+                <!-- Item 1 -->
+                <div class="grid grid-cols-12 gap-4 py-8 border-b border-white/20 items-center cart-item">
+                    <div class="col-span-3 md:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1599446786801-447a1184a446?q=80&w=300"
+                            class="w-full aspect-square object-cover border border-white/10">
+                    </div>
+                    <div class="col-span-7 md:col-span-6">
+                        <h3 class="font-syne font-bold text-xl uppercase mb-1">HELIOS V2 PRO</h3>
+                        <p class="font-mono text-sm text-gray-400">Juhar / Sticky</p>
+                        <p class="font-mono text-sm text-[#FF9E00] mt-2">15 990 FT</p>
+                    </div>
+                    <div class="col-span-2 md:col-span-2">
+                        <div class="flex items-center border border-white/20 bg-black">
+                            <button type="button" class="px-2 text-[#FF9E00] hover:bg-white/10 qty-btn">-</button>
+                            <input type="number" value="1"
+                                class="w-full bg-transparent text-center font-mono py-2 outline-none text-white appearance-none qty-input">
+                            <button type="button" class="px-2 text-[#FF9E00] hover:bg-white/10 qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-12 md:col-span-2 text-right flex flex-row md:flex-col justify-between items-center md:items-end mt-4 md:mt-0">
+                        <p class="font-mono font-bold item-total">15 990 FT</p>
+                        <button type="button"
+                            class="text-xs font-mono text-red-500 hover:text-red-400 uppercase mt-2 remove-btn">[TÖRLÉS]</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 flex flex-col md:flex-row justify-between items-start">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <label class="block font-mono text-xs text-[#FF9E00] mb-2 uppercase">KUPON KÓD</label>
+                    <div class="flex">
+                        <input type="text" id="discount-input" placeholder="KÓD"
+                            class="bg-black border border-white/20 text-white p-3 font-mono outline-none focus:border-[#FF9E00] w-full uppercase">
+                    </div>
+                    <p class="font-mono text-[10px] text-gray-500 mt-2">*A KEDVEZMÉNY A FIZETÉSNÉL KERÜL LEVONÁSRA.</p>
+                </div>
+
+                <div class="w-full md:w-1/3 flex flex-col items-end">
+                    <div class="flex justify-between w-full mb-4 font-mono text-xl border-b border-white/10 pb-4">
+                        <span>ÖSSZESEN:</span>
+                        <span class="text-[#FF9E00] font-bold" id="cart-total">15 990 FT</span>
+                    </div>
+                    <p class="font-mono text-xs text-gray-500 mb-8">ADÓK ÉS SZÁLLÍTÁS A PÉNZTÁRNÁL SZÁMOLVA.</p>
+
+                    <button type="button"
+                        class="w-full bg-[#FF9E00] text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-[#CCFF00] transition-colors shadow-[4px_4px_0px_0px_#ffffff] cursor-none-target relative overflow-hidden group">
+                        <span class="relative z-10">FIZETÉS INDÍTÁSA</span>
+                        <div
+                            class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 mix-blend-difference">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

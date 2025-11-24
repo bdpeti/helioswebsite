@@ -1,0 +1,90 @@
+<div class="min-h-screen bg-[#050406] text-[#f0f0f0] pt-24 pb-12 relative overflow-hidden">
+    <!-- Background Grid -->
+    <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Header -->
+        <div class="mb-20 text-center">
+            <div class="inline-block border border-[#FF9E00] text-[#FF9E00] px-4 py-1 font-mono text-xs mb-4 uppercase tracking-widest">
+                R&D DEPARTMENT // ACCESS LEVEL 5
+            </div>
+            <h1 class="text-6xl md:text-9xl font-black font-syne uppercase leading-none mb-6 glitch-text" data-text="THE LAB">
+                THE LAB
+            </h1>
+            <p class="font-mono text-gray-400 max-w-2xl mx-auto border-l-2 border-[#FF9E00] pl-6 text-left md:text-center md:border-l-0 md:border-t-2 md:pt-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <!-- Blueprint Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32 items-center">
+            <div class="border border-white/20 p-8 relative bg-[#0a0a0a]">
+                <!-- Blueprint Overlay -->
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10 pointer-events-none"></div>
+                
+                <!-- Technical Drawing Mockup -->
+                <div class="aspect-square border border-[#FF9E00]/30 relative flex items-center justify-center overflow-hidden">
+                    <div class="absolute top-4 left-4 font-mono text-xs text-[#FF9E00]">FIG. 1.0 // KEN SHAPE</div>
+                    <div class="absolute bottom-4 right-4 font-mono text-xs text-[#FF9E00]">SCALE 1:1</div>
+                    
+                    <!-- CSS Shapes representing a Ken -->
+                    <div class="w-2 h-64 bg-white/10 relative">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-white/10"></div> <!-- Sarado Top -->
+                        <div class="absolute top-16 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/10"></div> <!-- Sarado Main -->
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border border-[#FF9E00] opacity-50"></div> <!-- Base Cup -->
+                    </div>
+                    
+                    <!-- Measurement Lines -->
+                    <div class="absolute top-1/2 left-10 w-full h-[1px] bg-[#FF9E00]/50"></div>
+                    <div class="absolute top-10 left-1/2 h-full w-[1px] bg-[#FF9E00]/50"></div>
+                </div>
+            </div>
+            
+            <div>
+                <h2 class="text-4xl font-syne font-bold uppercase mb-8">PRECISION ENGINEERING</h2>
+                <div class="space-y-8 font-mono text-sm text-gray-400">
+                    <div>
+                        <h3 class="text-white font-bold uppercase mb-2 text-[#FF9E00]">01. LOREM IPSUM ANALYSIS</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold uppercase mb-2 text-[#FF9E00]">02. WEIGHT DISTRIBUTION</h3>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold uppercase mb-2 text-[#FF9E00]">03. MATERIAL SCIENCE</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/20 border border-white/20">
+            {% for i in (1..4) %}
+                <div class="bg-[#050406] p-8 hover:bg-[#FF9E00] hover:text-black transition-colors group cursor-none-target">
+                    <div class="font-mono text-xs text-gray-500 group-hover:text-black mb-2">DATA_POINT_0{{ i }}</div>
+                    <div class="font-syne font-bold text-3xl">9{{ i }}.{{ i }}%</div>
+                    <div class="font-mono text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity">OPTIMIZATION</div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Manifesto -->
+        <div class="mt-32 text-center max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-syne font-bold uppercase mb-8 leading-tight">
+                "STREET DESIGNED.<br><span class="text-[#FF9E00]">PRO BUILT.</span>"
+            </h2>
+            <p class="font-mono text-gray-400">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "The Lab",
+  "settings": []
+}
+{% endschema %}

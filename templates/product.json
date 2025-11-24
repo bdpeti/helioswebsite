@@ -2,6 +2,34 @@
     "sections": {
         "main": {
             "type": "main-product",
+            "blocks": {
+                "tech_specs": {
+                    "type": "tech_specs",
+                    "settings": {
+                        "wood_type": "Juhar / Kőris",
+                        "weight": "78g",
+                        "paint_type": "Rubber",
+                        "shape": "Helios V2"
+                    }
+                },
+                "play_button": {
+                    "type": "play_button",
+                    "settings": {
+                        "label": "HANGMINTA LEJÁTSZÁSA"
+                    }
+                },
+                "cross_sell": {
+                    "type": "cross_sell",
+                    "settings": {
+                        "heading": "NE FELEJTSD EL"
+                    }
+                }
+            },
+            "block_order": [
+                "tech_specs",
+                "play_button",
+                "cross_sell"
+            ],
             "settings": {}
         },
         "related": {

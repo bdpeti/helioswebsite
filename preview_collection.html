@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOS // CATALOG PREVIEW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="antialiased selection:bg-[#FF9E00] selection:text-black bg-[#050406] text-[#f0f0f0]">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="noise"></div>
+
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-sm mix-blend-difference">
+        <div class="flex justify-between items-center px-4 py-4 md:px-8">
+            <div
+                class="text-2xl font-bold tracking-tighter font-syne text-[#FF9E00] hover:scale-110 transition-transform cursor-none-target">
+                HELIOS</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="/index.html" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Webshop</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/preview_cart.html"
+                    class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target">KOSÁR
+                    (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div
+        class="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#050406] border-b border-white/20">
+        <div class="absolute inset-0 opacity-40">
+            <div
+                class="w-full h-full bg-[url('https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale invert">
+            </div>
+        </div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-6xl md:text-9xl font-black font-syne uppercase text-white glitch-text" data-text="KENDAMÁK">
+                KENDAMÁK</h1>
+            <p class="font-mono text-[#FF9E00] uppercase tracking-widest mt-4">12 TERMÉK // MINDEN</p>
+        </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="min-h-screen bg-[#050406] text-[#f0f0f0]">
+        <div class="flex flex-col lg:flex-row">
+            <!-- Sidebar -->
+            <aside
+                class="w-full lg:w-64 border-b lg:border-b-0 lg:border-r border-white/20 p-6 sticky top-20 h-fit bg-[#050406] z-30">
+                <div class="flex justify-between items-center lg:block mb-4 lg:mb-8">
+                    <h2 class="font-syne font-bold uppercase text-xl">SZŰRÉS</h2>
+                </div>
+                <div class="hidden lg:block space-y-8">
+                    <div>
+                        <h3 class="font-mono text-xs text-gray-500 mb-3 uppercase">FAANYAG</h3>
+                        <ul class="space-y-2 font-mono text-sm">
+                            <li class="flex items-center gap-2"><input type="checkbox"
+                                    class="accent-[#FF9E00] bg-black border-white/20"><span>JUHAR</span></li>
+                            <li class="flex items-center gap-2"><input type="checkbox"
+                                    class="accent-[#FF9E00] bg-black border-white/20"><span>BÜKK</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products -->
+            <div class="flex-1 p-4 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-white/20 border border-white/20">
+                    <!-- Product 1 -->
+                    <div
+                        class="bg-[#050406] p-6 group relative overflow-hidden hover:z-10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,158,0,0.1)]">
+                        <div class="absolute top-4 left-4 z-20 flex gap-2"><span
+                                class="bg-[#CCFF00] text-black text-xs px-2 py-1 font-bold font-mono">SALE</span></div>
+                        <div class="aspect-[4/5] w-full bg-[#111] mb-6 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1599446786801-447a1184a446?q=80&w=600"
+                                class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <div
+                                class="absolute inset-0 w-full h-full bg-[#FF9E00] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-[#FF9E00] text-black py-3 font-bold uppercase text-xs hover:bg-white transition-colors cursor-none-target">GYORS
+                                    VÁSÁRLÁS</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-syne font-bold text-xl uppercase mb-1 group-hover:text-[#FF9E00] transition-colors">
+                                HELIOS V2 PRO</h3>
+                            <div class="flex justify-between items-end">
+                                <p class="font-mono text-xs text-gray-500">Kendama</p>
+                                <div class="text-right"><span class="font-mono font-bold text-[#FF9E00]">15 990
+                                        FT</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div
+                        class="bg-[#050406] p-6 group relative overflow-hidden hover:z-10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,158,0,0.1)]">
+                        <div class="aspect-[4/5] w-full bg-[#111] mb-6 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1574577457224-b174099d81d4?q=80&w=600"
+                                class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <div
+                                class="absolute inset-0 w-full h-full bg-[#FF9E00] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-[#FF9E00] text-black py-3 font-bold uppercase text-xs hover:bg-white transition-colors cursor-none-target">GYORS
+                                    VÁSÁRLÁS</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-syne font-bold text-xl uppercase mb-1 group-hover:text-[#FF9E00] transition-colors">
+                                BRUTAL V1</h3>
+                            <div class="flex justify-between items-end">
+                                <p class="font-mono text-xs text-gray-500">Kendama</p>
+                                <div class="text-right"><span class="font-mono font-bold text-[#FF9E00]">18 500
+                                        FT</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<div class="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#050406] border-b border-white/20">
+    <!-- Background Image -->
+    <div class="absolute inset-0 opacity-40">
+        {% if collection.image %}
+            {{ collection.image | image_url: width: 2000 | image_tag: class: 'w-full h-full object-cover grayscale invert' }}
+        {% else %}
+            <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale invert"></div>
+        {% endif %}
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 text-center">
+        <h1 class="text-6xl md:text-9xl font-black font-syne uppercase text-white glitch-text" data-text="{{ collection.title }}">
+            {{ collection.title }}
+        </h1>
+        <p class="font-mono text-[#FF9E00] uppercase tracking-widest mt-4">
+            {{ collection.products_count }} TERMÉK // {{ current_tags | join: ' + ' | default: 'MINDEN' }}
+        </p>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": []
+}
+{% endschema %}

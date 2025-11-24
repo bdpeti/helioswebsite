@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOS // THE LAB PREVIEW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="antialiased selection:bg-[#FF9E00] selection:text-black bg-[#050406] text-[#f0f0f0]">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="noise"></div>
+
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-sm mix-blend-difference">
+        <div class="flex justify-between items-center px-4 py-4 md:px-8">
+            <div
+                class="text-2xl font-bold tracking-tighter font-syne text-[#FF9E00] hover:scale-110 transition-transform cursor-none-target">
+                HELIOS</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="/index.html" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Webshop</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/preview_cart.html"
+                    class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target">KOSÁR
+                    (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lab Section (Static Mock) -->
+    <div class="min-h-screen bg-[#050406] text-[#f0f0f0] pt-24 pb-12 relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="mb-20 text-center">
+                <div
+                    class="inline-block border border-[#FF9E00] text-[#FF9E00] px-4 py-1 font-mono text-xs mb-4 uppercase tracking-widest">
+                    R&D DEPARTMENT // ACCESS LEVEL 5
+                </div>
+                <h1 class="text-6xl md:text-9xl font-black font-syne uppercase leading-none mb-6 glitch-text"
+                    data-text="THE LAB">THE LAB</h1>
+                <p
+                    class="font-mono text-gray-400 max-w-2xl mx-auto border-l-2 border-[#FF9E00] pl-6 text-left md:text-center md:border-l-0 md:border-t-2 md:pt-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32 items-center">
+                <div class="border border-white/20 p-8 relative bg-[#0a0a0a]">
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10 pointer-events-none">
+                    </div>
+                    <div
+                        class="aspect-square border border-[#FF9E00]/30 relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute top-4 left-4 font-mono text-xs text-[#FF9E00]">FIG. 1.0 // KEN SHAPE</div>
+                        <div class="absolute bottom-4 right-4 font-mono text-xs text-[#FF9E00]">SCALE 1:1</div>
+                        <div class="w-2 h-64 bg-white/10 relative">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-white/10"></div>
+                            <div class="absolute top-16 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/10"></div>
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border border-[#FF9E00] opacity-50">
+                            </div>
+                        </div>
+                        <div class="absolute top-1/2 left-10 w-full h-[1px] bg-[#FF9E00]/50"></div>
+                        <div class="absolute top-10 left-1/2 h-full w-[1px] bg-[#FF9E00]/50"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-4xl font-syne font-bold uppercase mb-8">PRECISION ENGINEERING</h2>
+                    <div class="space-y-8 font-mono text-sm text-gray-400">
+                        <div>
+                            <h3 class="text-white font-bold uppercase mb-2 text-[#FF9E00]">01. LOREM IPSUM ANALYSIS</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold uppercase mb-2 text-[#FF9E00]">02. WEIGHT DISTRIBUTION</h3>
+                            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/20 border border-white/20">
+                <div
+                    class="bg-[#050406] p-8 hover:bg-[#FF9E00] hover:text-black transition-colors group cursor-none-target">
+                    <div class="font-mono text-xs text-gray-500 group-hover:text-black mb-2">DATA_POINT_01</div>
+                    <div class="font-syne font-bold text-3xl">91.1%</div>
+                    <div class="font-mono text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        OPTIMIZATION</div>
+                </div>
+                <div
+                    class="bg-[#050406] p-8 hover:bg-[#FF9E00] hover:text-black transition-colors group cursor-none-target">
+                    <div class="font-mono text-xs text-gray-500 group-hover:text-black mb-2">DATA_POINT_02</div>
+                    <div class="font-syne font-bold text-3xl">92.2%</div>
+                    <div class="font-mono text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        OPTIMIZATION</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
