@@ -1,0 +1,33 @@
+<section class="py-20 px-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-4xl font-syne font-bold uppercase">KÖZÖSSÉG <span class="text-[#FF9E00]">#HELIOSGANG</span></h2>
+            <a href="#" class="font-mono text-sm text-[#FF9E00] hover:text-white transition-colors cursor-none-target">@HELIOSKENDAMA -></a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {% for i in (1..4) %}
+                <div class="aspect-[4/5] bg-[#111] border border-white/10 relative group overflow-hidden cursor-none-target">
+                    <img src="https://images.unsplash.com/photo-15{{ i }}99446786801-447a1184a446?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" alt="Social {{ i }}">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-[#FF9E00] rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Social Grid",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Social Grid"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,92 @@
+<section class="py-20 px-4 md:px-8 border-t border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-[600px]">
+        {% for block in section.blocks %}
+            <a href="{{ block.settings.collection.url | default: '#' }}" class="relative group h-full overflow-hidden border border-white/20 cursor-none-target block">
+                <!-- Background -->
+                <div class="absolute inset-0 bg-[#111]">
+                    {% if block.settings.image != blank %}
+                        {{ block.settings.image | image_url: width: 800 | image_tag: class: 'w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0' }}
+                    {% else %}
+                        <div class="w-full h-full bg-gray-900"></div>
+                    {% endif %}
+                </div>
+                
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                <!-- Content -->
+                <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-4xl font-syne font-black uppercase mb-2 text-outline group-hover:text-[#FF9E00] transition-colors" style="-webkit-text-stroke-width: 1px;">
+                        {{ block.settings.title }}
+                    </h3>
+                    <div class="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        <span class="text-[#CCFF00] font-mono text-sm uppercase">Felfedezés</span>
+                        <span class="text-[#CCFF00]">-></span>
+                    </div>
+                </div>
+
+                <!-- Number -->
+                <div class="absolute top-4 right-4 font-mono text-4xl font-bold text-white/10 group-hover:text-[#FF9E00]/20 transition-colors">
+                    0{{ forloop.index }}
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection List",
+  "max_blocks": 3,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "KATEGÓRIA"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection List",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "title": "KENDAMÁK"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "RUHÁZAT"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "KIEGÉSZÍTŐK"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

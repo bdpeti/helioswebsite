@@ -2,11 +2,45 @@
     "sections": {
         "hero": {
             "type": "hero",
-            "settings": {}
+            "settings": {
+                "video_url": ""
+            }
         },
         "marquee": {
             "type": "marquee",
             "settings": {}
+        },
+        "spotlight": {
+            "type": "featured-product-spotlight",
+            "settings": {}
+        },
+        "collection_list": {
+            "type": "collection-list",
+            "blocks": {
+                "block_1": {
+                    "type": "collection",
+                    "settings": {
+                        "title": "KENDAMÁK"
+                    }
+                },
+                "block_2": {
+                    "type": "collection",
+                    "settings": {
+                        "title": "RUHÁZAT"
+                    }
+                },
+                "block_3": {
+                    "type": "collection",
+                    "settings": {
+                        "title": "KIEGÉSZÍTŐK"
+                    }
+                }
+            },
+            "block_order": [
+                "block_1",
+                "block_2",
+                "block_3"
+            ]
         },
         "featured_collection": {
             "type": "featured-collection",
@@ -15,12 +49,19 @@
         "video_text": {
             "type": "video-text",
             "settings": {}
+        },
+        "social": {
+            "type": "social-grid",
+            "settings": {}
         }
     },
     "order": [
         "hero",
         "marquee",
+        "spotlight",
+        "collection_list",
         "featured_collection",
-        "video_text"
+        "video_text",
+        "social"
     ]
 }
