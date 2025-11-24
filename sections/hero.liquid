@@ -1,0 +1,93 @@
+<header class="relative min-h-screen flex flex-col justify-center items-center pt-20 overflow-hidden grid-bg">
+    <!-- Floating Elements -->
+    <div class="absolute top-1/4 left-10 w-24 h-24 border border-[#FF6E07] rounded-full opacity-20 animate-pulse">
+    </div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 border border-[#CCFF00] opacity-20 rotate-45"></div>
+
+    <div class="container mx-auto px-4 relative z-10 text-center">
+        <div class="reveal">
+            <p class="text-[#CCFF00] uppercase tracking-[0.5em] text-sm mb-4">{{ section.settings.subtitle }}</p>
+            <h1 class="text-5xl md:text-9xl font-black leading-none mb-6 font-syne uppercase">
+                {{ section.settings.title_line_1 }}<br>
+                <span class="text-outline">{{ section.settings.title_line_2 }}</span>
+            </h1>
+        </div>
+
+        <div class="reveal delay-100 flex justify-center gap-6 mt-8">
+            <a href="{{ section.settings.button_link }}" class="bg-[#FF9E00] text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-[#CCFF00] hover:text-black transition-all transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_#ffffff] cursor-none-target no-underline inline-block">
+                {{ section.settings.button_text }}
+            </a>
+            <a href="{{ section.settings.secondary_button_link }}" class="border border-white text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all cursor-none-target no-underline inline-block">
+                {{ section.settings.secondary_button_text }}
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Image (Abstract Representation) -->
+    <div class="absolute opacity-20 mix-blend-overlay pointer-events-none top-0 left-0 w-full h-full">
+        {% if section.settings.image != blank %}
+            {{ section.settings.image | image_url: width: 2000 | image_tag: class: 'w-full h-full object-cover grayscale invert', loading: 'eager' }}
+        {% else %}
+            <img src="https://images.unsplash.com/photo-1621252179027-94459d27d3ee?q=80&w=2070&auto=format&fit=crop"
+            class="w-full h-full object-cover grayscale invert" alt="Texture">
+        {% endif %}
+    </div>
+</header>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "A KÖVETKEZŐ GENERÁCIÓ"
+    },
+    {
+      "type": "text",
+      "id": "title_line_1",
+      "label": "Title Line 1",
+      "default": "URALD"
+    },
+    {
+      "type": "text",
+      "id": "title_line_2",
+      "label": "Title Line 2",
+      "default": "A FLOW-T"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "VÁSÁRLÁS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "VIDEÓ"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

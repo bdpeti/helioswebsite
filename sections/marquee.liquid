@@ -1,0 +1,31 @@
+<div class="bg-[#FF9E00] text-black py-4 border-y border-black overflow-hidden transform -rotate-1 scale-105 z-20 relative">
+    <div class="marquee-container">
+        <div class="marquee-content font-syne font-bold text-4xl uppercase">
+            {% for i in (1..4) %}
+                &nbsp;{{ section.settings.text }} //
+            {% endfor %}
+             {% for i in (1..4) %}
+                &nbsp;{{ section.settings.text }} //
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "SPIKE // CUP // LUNAR // STILT // WHIRLWIND // KENFLIP // JUGGLE // SPACWALK"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee"
+    }
+  ]
+}
+{% endschema %}

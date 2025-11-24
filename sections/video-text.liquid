@@ -1,0 +1,96 @@
+<section class="py-20 px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+        <div class="relative reveal p-4 border border-white/10">
+            <!-- Decorative Elements -->
+            <div class="absolute -top-4 -left-4 w-full h-full border border-[#FF9E00] -z-10"></div>
+            <div
+                class="aspect-video bg-[#1a1a1a] flex items-center justify-center overflow-hidden group cursor-none-target">
+                <div
+                    class="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700"
+                    style="background-image: url('{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1000 }}{% else %}https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=1000&auto=format&fit=crop{% endif %}');">
+                </div>
+                <div
+                    class="z-10 w-20 h-20 bg-[#FF9E00] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="black"
+                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal lg:pl-12">
+            <h2 class="text-4xl md:text-5xl font-syne font-bold mb-6 leading-tight">
+                {{ section.settings.heading_line_1 }} <span class="text-[#CCFF00] italic">{{ section.settings.heading_highlight_1 }}</span><br>
+                {{ section.settings.heading_line_2 }} <span class="text-[#FF9E00] italic">{{ section.settings.heading_highlight_2 }}</span>
+            </h2>
+            <p
+                class="text-gray-400 mb-8 font-mono leading-relaxed text-sm md:text-base border-l-2 border-[#FF9E00] pl-6">
+                {{ section.settings.text }}
+            </p>
+            <a href="{{ section.settings.link }}"
+                class="inline-block text-[#FF9E00] border-b border-[#FF9E00] pb-1 hover:text-white hover:border-white transition-colors uppercase font-bold tracking-widest cursor-none-target no-underline">
+                {{ section.settings.link_text }} ->
+            </a>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Video Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_1",
+      "label": "Heading Line 1",
+      "default": "UTCÁRA"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight_1",
+      "label": "Highlight 1",
+      "default": "TERVEZVE"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "Heading Line 2",
+      "default": "PROFIKNAK"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight_2",
+      "label": "Highlight 2",
+      "default": "ÉPÍTVE"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "A formáinkat adatok vezérlik és az utcán teszteljük. Minden felesleget lehántottunk, hogy a tapadásra, az egyensúlyra és a rögzítésre koncentrálhassunk. Ez nem játék. Ez a flow-d kiterjesztése."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "OLVASD EL A KIÁLTVÁNYT"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Text"
+    }
+  ]
+}
+{% endschema %}

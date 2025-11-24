@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOS // KENDAMA // HUNGARY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-CGGAX1OV.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C7mIlcU-.css">
+</head>
+
+<body class="antialiased selection:bg-[#FF9E00] selection:text-black">
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Noise Texture -->
+    <div class="noise"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <h1 class="text-6xl md:text-9xl font-bold text-[#FF9E00] font-syne tracking-tighter">TÖLTÉS</h1>
+        <div class="w-64 h-1 bg-gray-800 mt-4 overflow-hidden">
+            <div id="loader-bar" class="h-full bg-[#FF9E00] w-0 transition-all duration-300"></div>
+        </div>
+        <p class="mt-2 text-xs text-[#CCFF00]">RENDSZER.INDÍTÁSA...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-sm mix-blend-difference">
+        <div class="flex justify-between items-center px-4 py-4 md:px-8">
+            <div
+                class="text-2xl font-bold tracking-tighter font-syne text-[#FF9E00] hover:scale-110 transition-transform cursor-none-target">
+                HELIOS
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Webshop</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Blog</a>
+                <a href="#" class="hover:text-[#FF9E00] transition-colors cursor-none-target">Rólunk</a>
+                <a href="#" class="nav-disabled" title="Hamarosan...">Események</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button
+                    class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target">
+                    KOSÁR (0)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col justify-center items-center pt-20 overflow-hidden grid-bg">
+        <!-- Floating Elements -->
+        <div class="absolute top-1/4 left-10 w-24 h-24 border border-[#FF6E07] rounded-full opacity-20 animate-pulse">
+        </div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 border border-[#CCFF00] opacity-20 rotate-45"></div>
+
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <div class="reveal">
+                <p class="text-[#CCFF00] uppercase tracking-[0.5em] text-sm mb-4">A KÖVETKEZŐ GENERÁCIÓ</p>
+                <h1 class="text-5xl md:text-9xl font-black leading-none mb-6 font-syne uppercase">
+                    URALD<br>
+                    <span class="text-outline">A FLOW-T</span>
+                </h1>
+            </div>
+
+            <div class="reveal delay-100 flex justify-center gap-6 mt-8">
+                <button
+                    class="bg-[#FF9E00] text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-[#CCFF00] hover:text-black transition-all transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_#ffffff] cursor-none-target">
+                    VÁSÁRLÁS
+                </button>
+                <button
+                    class="border border-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all cursor-none-target">
+                    VIDEÓ
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Image (Abstract Representation) -->
+        <div class="absolute opacity-20 mix-blend-overlay pointer-events-none top-0 left-0 w-full h-full">
+            <img src="https://images.unsplash.com/photo-1621252179027-94459d27d3ee?q=80&w=2070&auto=format&fit=crop"
+                class="w-full h-full object-cover grayscale invert" alt="Texture">
+        </div>
+    </header>
+
+    <!-- Infinite Marquee -->
+    <div
+        class="bg-[#FF9E00] text-black py-4 border-y border-black overflow-hidden transform -rotate-1 scale-105 z-20 relative">
+        <div class="marquee-container">
+            <div class="marquee-content font-syne font-bold text-4xl uppercase">
+                &nbsp;SPIKE // CUP // LUNAR // STILT // WHIRLWIND // KENFLIP // JUGGLE // SPACWALK // &nbsp;SPIKE // CUP
+                // LUNAR // STILT // WHIRLWIND // KENFLIP // JUGGLE // SPACWALK //
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection Grid -->
+    <section class="py-24 px-4 md:px-8 relative">
+        <div class="flex justify-between items-end mb-16 reveal">
+            <h2 class="text-4xl md:text-6xl font-syne font-bold uppercase">LEGÚJABB <span
+                    class="text-[#FF9E00]">DROP</span></h2>
+            <div class="hidden md:block text-right">
+                <p class="text-xs text-gray-400 font-mono">04. SZEZON // 2024</p>
+                <p class="text-xs text-gray-400 font-mono">PRECÍZIÓS TERVEZÉS</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-white/20">
+            <!-- Product 1 -->
+            <div
+                class="product-card group border-r border-b border-white/20 p-8 relative overflow-hidden reveal cursor-none-target">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="bg-[#CCFF00] text-black text-xs px-2 py-1 font-bold">FORRÓ</span>
+                </div>
+                <div class="h-80 w-full bg-[#111] mb-6 overflow-hidden relative">
+                    <!-- Placeholder SVG for Kendama -->
+                    <img src="https://images.unsplash.com/photo-1599446786801-447a1184a446?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover" alt="Kendama 1">
+                    <div
+                        class="absolute inset-0 bg-[#FF9E00] mix-blend-multiply opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold font-syne mb-1 group-hover:text-[#FF9E00] transition-colors">
+                            HELIOS NAPKITÖRÉS</h3>
+                        <p class="text-gray-400 text-sm font-mono">Juhar / Sticky Clear</p>
+                    </div>
+                    <p class="font-mono font-bold">15 990 FT</p>
+                </div>
+                <button
+                    class="w-full mt-6 py-3 border border-white/30 text-xs uppercase hover:bg-white hover:text-black transition-colors opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 duration-300">KOSÁRBA</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div
+                class="product-card group border-r border-b border-white/20 p-8 relative overflow-hidden reveal cursor-none-target">
+                <div class="h-80 w-full bg-[#111] mb-6 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1520697966952-b676f0d96d2b?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover" alt="Kendama 2">
+                    <div
+                        class="absolute inset-0 bg-[#FF6E07] mix-blend-multiply opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold font-syne mb-1 group-hover:text-[#FF9E00] transition-colors">
+                            NARANCS KÖD</h3>
+                        <p class="text-gray-400 text-sm font-mono">Bükk / Cushion</p>
+                    </div>
+                    <p class="font-mono font-bold">12 990 FT</p>
+                </div>
+                <button
+                    class="w-full mt-6 py-3 border border-white/30 text-xs uppercase hover:bg-white hover:text-black transition-colors opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 duration-300">KOSÁRBA</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div
+                class="product-card group border-b md:border-r-0 lg:border-r border-white/20 p-8 relative overflow-hidden reveal cursor-none-target">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="border border-[#FF9E00] text-[#FF9E00] text-xs px-2 py-1 font-bold">LIMITÁLT</span>
+                </div>
+                <div class="h-80 w-full bg-[#111] mb-6 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1574577457224-b174099d81d4?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover" alt="Kendama 3">
+                    <div
+                        class="absolute inset-0 bg-[#CCFF00] mix-blend-multiply opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold font-syne mb-1 group-hover:text-[#FF9E00] transition-colors">
+                            BRUTAL V1</h3>
+                        <p class="text-gray-400 text-sm font-mono">Kőris / Rubber</p>
+                    </div>
+                    <p class="font-mono font-bold">18 500 FT</p>
+                </div>
+                <button
+                    class="w-full mt-6 py-3 border border-white/30 text-xs uppercase hover:bg-white hover:text-black transition-colors opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 duration-300">KOSÁRBA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture/Video Section (Brutalist Layout) -->
+    <section class="py-20 px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+            <div class="relative reveal p-4 border border-white/10">
+                <!-- Decorative Elements -->
+                <div class="absolute -top-4 -left-4 w-full h-full border border-[#FF9E00] -z-10"></div>
+                <div
+                    class="aspect-video bg-[#1a1a1a] flex items-center justify-center overflow-hidden group cursor-none-target">
+                    <div
+                        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <div
+                        class="z-10 w-20 h-20 bg-[#FF9E00] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="black"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal lg:pl-12">
+                <h2 class="text-4xl md:text-5xl font-syne font-bold mb-6 leading-tight">
+                    UTCÁRA <span class="text-[#CCFF00] italic">TERVEZVE</span><br>
+                    PROFIKNAK <span class="text-[#FF9E00] italic">ÉPÍTVE</span>
+                </h2>
+                <p
+                    class="text-gray-400 mb-8 font-mono leading-relaxed text-sm md:text-base border-l-2 border-[#FF9E00] pl-6">
+                    A formáinkat adatok vezérlik és az utcán teszteljük. Minden felesleget lehántottunk, hogy a
+                    tapadásra, az egyensúlyra és a rögzítésre koncentrálhassunk. Ez nem játék. Ez a flow-d
+                    kiterjesztése.
+                </p>
+                <a href="#"
+                    class="inline-block text-[#FF9E00] border-b border-[#FF9E00] pb-1 hover:text-white hover:border-white transition-colors uppercase font-bold tracking-widest cursor-none-target">
+                    OLVASD EL A KIÁLTVÁNYT ->
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter / Footer -->
+    <footer class="mt-20 border-t border-white/20 bg-[#0a0a0a] relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF9E00] to-transparent opacity-5 pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-4 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-3xl font-syne font-bold mb-6 uppercase">NE MARADJ LE <br>A <span
+                            class="text-[#FF9E00]">KÖVETKEZŐ DROP-RÓL</span></h3>
+                    <div class="flex border-b border-white hover:border-[#FF9E00] transition-colors py-2">
+                        <input type="email" placeholder="EMAIL CÍM..."
+                            class="bg-transparent w-full outline-none font-mono text-sm placeholder-gray-600 uppercase cursor-none-target text-white">
+                        <button
+                            class="text-[#FF9E00] font-bold uppercase text-sm cursor-none-target hover:text-white">KÜLDÉS</button>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-500 font-mono">NINCS SPAM. CSAK TŰZ. IRATKOZZ LE BÁRMIKOR.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8 font-mono text-sm">
+                    <ul>
+                        <li class="mb-4 text-[#FF9E00] font-bold uppercase">BOLT</li>
+                        <li class="mb-2"><a href="#"
+                                class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Kendamák</a>
+                        </li>
+                        <li class="mb-2"><a href="#"
+                                class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Ruházat</a>
+                        </li>
+                        <li class="mb-2"><a href="#"
+                                class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Kiegészítők</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="mb-4 text-[#FF9E00] font-bold uppercase">KAPCSOLAT</li>
+                        <li class="mb-2"><a href="#"
+                                class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Instagram</a>
+                        </li>
+                        <li class="mb-2"><a href="#"
+                                class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">TikTok</a>
+                        </li>
+                        <li class="mb-2"><a href="#"
+                                class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-mono uppercase">
+                <div>© 2024 HELIOS KENDAMA. MINDEN JOG FENNTARTVA.</div>
+                <div class="mt-4 md:mt-0">GEN Z-NEK TERVEZVE // CODE: ORANGE</div>
+            </div>
+        </div>
+
+        <!-- Big Footer Text -->
+        <div class="w-full text-center overflow-hidden leading-none select-none pointer-events-none opacity-10">
+            <h1 class="text-[15vw] font-syne font-black text-white translate-y-10">HELIOS</h1>
+        </div>
+    </footer>
+
+</body>
+
+</html>

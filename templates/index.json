@@ -1,0 +1,26 @@
+{
+    "sections": {
+        "hero": {
+            "type": "hero",
+            "settings": {}
+        },
+        "marquee": {
+            "type": "marquee",
+            "settings": {}
+        },
+        "featured_collection": {
+            "type": "featured-collection",
+            "settings": {}
+        },
+        "video_text": {
+            "type": "video-text",
+            "settings": {}
+        }
+    },
+    "order": [
+        "hero",
+        "marquee",
+        "featured_collection",
+        "video_text"
+    ]
+}

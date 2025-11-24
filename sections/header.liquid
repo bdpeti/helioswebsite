@@ -1,0 +1,31 @@
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-sm mix-blend-difference">
+    <div class="flex justify-between items-center px-4 py-4 md:px-8">
+        <div class="text-2xl font-bold tracking-tighter font-syne text-[#FF9E00] hover:scale-110 transition-transform cursor-none-target">
+            <a href="{{ routes.root_url }}" class="no-underline text-inherit">HELIOS</a>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            {% for link in section.settings.menu.links %}
+              <a href="{{ link.url }}" class="hover:text-[#FF9E00] transition-colors cursor-none-target">{{ link.title }}</a>
+            {% endfor %}
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="{{ routes.cart_url }}" class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target text-white no-underline">
+                KOSÁR ({{ cart.item_count }})
+            </a>
+        </div>
+    </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Menu"
+    }
+  ]
+}
+{% endschema %}

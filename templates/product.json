@@ -1,0 +1,19 @@
+{
+    "sections": {
+        "main": {
+            "type": "main-product",
+            "settings": {}
+        },
+        "related": {
+            "type": "featured-collection",
+            "settings": {
+                "title": "HASONLÓ",
+                "highlight_word": "TERMÉKEK"
+            }
+        }
+    },
+    "order": [
+        "main",
+        "related"
+    ]
+}

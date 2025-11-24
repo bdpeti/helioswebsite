@@ -1,0 +1,117 @@
+<div class="min-h-screen pt-24 pb-12 bg-[#050406] text-[#f0f0f0]">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- Product Images (Left - 7 cols) -->
+      <div class="lg:col-span-7 space-y-4">
+        {% for media in product.media %}
+          <div class="relative w-full aspect-square border border-white/10 overflow-hidden group cursor-none-target">
+            <img 
+              src="{{ media | image_url: width: 1200 }}" 
+              alt="{{ media.alt | escape }}"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-[#FF9E00] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"></div>
+            
+            <!-- Tech overlay -->
+            <div class="absolute bottom-4 left-4 font-mono text-xs text-[#FF9E00] opacity-0 group-hover:opacity-100 transition-opacity">
+              IMG_ID: {{ media.id }} // RES: HIGH
+            </div>
+          </div>
+        {% else %}
+            <div class="relative w-full aspect-square border border-white/10 overflow-hidden bg-[#111] flex items-center justify-center">
+                {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover opacity-50' }}
+            </div>
+        {% endfor %}
+      </div>
+
+      <!-- Product Details (Right - 5 cols) - Sticky -->
+      <div class="lg:col-span-5 relative">
+        <div class="lg:sticky lg:top-32 space-y-8">
+          
+          <!-- Header -->
+          <div class="border-b border-white/20 pb-6">
+            <div class="flex justify-between items-start mb-2">
+                <span class="bg-[#CCFF00] text-black text-xs px-2 py-1 font-bold font-mono">ÚJ DROP</span>
+                <span class="font-mono text-xs text-gray-400">SKU: {{ product.selected_or_first_available_variant.sku | default: 'N/A' }}</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black font-syne uppercase leading-none mb-4 text-outline hover:text-[#FF9E00] transition-colors duration-300" style="-webkit-text-stroke-width: 2px;">
+              {{ product.title }}
+            </h1>
+            <div class="flex items-center gap-4">
+                <span class="text-3xl font-mono font-bold text-[#FF9E00]">{{ product.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                    <span class="text-xl font-mono text-gray-500 line-through">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="font-mono text-sm text-gray-400 leading-relaxed border-l-2 border-[#FF9E00] pl-4">
+            {{ product.description }}
+          </div>
+
+          <!-- Add to Cart Form -->
+          {% form 'product', product %}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            
+            <!-- Variants would go here (simplified for now) -->
+            {% unless product.has_only_default_variant %}
+              <div class="mb-6">
+                <label class="block font-mono text-xs text-[#FF9E00] mb-2 uppercase">Változat</label>
+                <select name="id" class="w-full bg-black border border-white/20 text-white p-3 font-mono focus:border-[#FF9E00] outline-none">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
+                      {{ variant.title }} - {{ variant.price | money }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% endunless %}
+
+            <button type="submit" 
+                class="w-full bg-[#FF9E00] text-black py-5 font-bold uppercase tracking-widest hover:bg-[#CCFF00] transition-colors shadow-[4px_4px_0px_0px_#ffffff] hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-none-target relative overflow-hidden group">
+                <span class="relative z-10">KOSÁRBA HELYEZÉS</span>
+                <div class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 mix-blend-difference"></div>
+            </button>
+          {% endform %}
+
+          <!-- Tech Specs / Accordion -->
+          <div class="border-t border-white/20 pt-6 space-y-4">
+             <div class="group cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-mono text-sm uppercase text-gray-300 group-hover:text-[#FF9E00]">Technikai Adatok</span>
+                    <span class="text-[#FF9E00]">+</span>
+                </div>
+                <div class="text-xs font-mono text-gray-500 hidden group-hover:block">
+                    <p>SÚLY: 75g (+/- 3g)</p>
+                    <p>FAANYAG: Juhar / Bükk</p>
+                    <p>FESTÉS: Sticky Clear v4</p>
+                </div>
+             </div>
+             <div class="group cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-mono text-sm uppercase text-gray-300 group-hover:text-[#FF9E00]">Szállítás</span>
+                    <span class="text-[#FF9E00]">+</span>
+                </div>
+             </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main Product"
+    }
+  ]
+}
+{% endschema %}
