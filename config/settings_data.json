@@ -1,0 +1,18 @@
+{
+    "current": {
+        "color_primary": "#FF9E00",
+        "color_bg": "#050406",
+        "color_accent": "#CCFF00",
+        "color_text": "#f0f0f0",
+        "social_instagram_link": "https://instagram.com/helioskendama",
+        "social_tiktok_link": "https://tiktok.com/@helioskendama"
+    },
+    "presets": {
+        "Default": {
+            "color_primary": "#FF9E00",
+            "color_bg": "#050406",
+            "color_accent": "#CCFF00",
+            "color_text": "#f0f0f0"
+        }
+    }
+}

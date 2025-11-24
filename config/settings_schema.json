@@ -1,0 +1,87 @@
+[
+    {
+        "name": "theme_info",
+        "theme_name": "Helios Brutalist",
+        "theme_author": "Antigravity",
+        "theme_version": "1.0.0",
+        "theme_documentation_url": "https://github.com/example",
+        "theme_support_url": "https://github.com/example"
+    },
+    {
+        "name": "Colors",
+        "settings": [
+            {
+                "type": "color",
+                "id": "color_primary",
+                "label": "Primary Color",
+                "default": "#FF9E00"
+            },
+            {
+                "type": "color",
+                "id": "color_bg",
+                "label": "Background Color",
+                "default": "#050406"
+            },
+            {
+                "type": "color",
+                "id": "color_accent",
+                "label": "Accent Color",
+                "default": "#CCFF00"
+            },
+            {
+                "type": "color",
+                "id": "color_text",
+                "label": "Text Color",
+                "default": "#f0f0f0"
+            }
+        ]
+    },
+    {
+        "name": "Typography",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Headings"
+            },
+            {
+                "type": "font_picker",
+                "id": "type_header_font",
+                "label": "Heading Font",
+                "default": "sans-serif"
+            },
+            {
+                "type": "header",
+                "content": "Body"
+            },
+            {
+                "type": "font_picker",
+                "id": "type_body_font",
+                "label": "Body Font",
+                "default": "mono"
+            }
+        ]
+    },
+    {
+        "name": "Social Media",
+        "settings": [
+            {
+                "type": "text",
+                "id": "social_instagram_link",
+                "label": "Instagram",
+                "info": "https://instagram.com/yourhandle"
+            },
+            {
+                "type": "text",
+                "id": "social_tiktok_link",
+                "label": "TikTok",
+                "info": "https://tiktok.com/@yourhandle"
+            },
+            {
+                "type": "text",
+                "id": "social_discord_link",
+                "label": "Discord",
+                "info": "https://discord.gg/yourserver"
+            }
+        ]
+    }
+]

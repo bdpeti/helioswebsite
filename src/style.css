@@ -5,7 +5,8 @@
 :root {
     --c-primary: #FF9E00;
     --c-bg: #050406;
-    --c-accent: #CCFF00; /* Updated from Red to Acid Lime */
+    --c-accent: #CCFF00;
+    /* Updated from Red to Acid Lime */
     --c-mid: #FF8603;
     --c-deep: #FF6E07;
     --c-white: #f0f0f0;
@@ -15,11 +16,15 @@ body {
     background-color: var(--c-bg);
     color: var(--c-white);
     font-family: 'Space Mono', monospace;
-    cursor: none; /* Custom cursor */
+    cursor: none;
+    /* Custom cursor */
     overflow-x: hidden;
 }
 
-h1, h2, h3, .display-font {
+h1,
+h2,
+h3,
+.display-font {
     font-family: 'Syne', sans-serif;
 }
 
@@ -58,7 +63,8 @@ h1, h2, h3, .display-font {
 }
 
 /* Custom Cursor */
-.cursor-dot, .cursor-outline {
+.cursor-dot,
+.cursor-outline {
     position: fixed;
     top: 0;
     left: 0;
@@ -93,8 +99,13 @@ h1, h2, h3, .display-font {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Glitch/Noise Overlay Effect */
@@ -153,8 +164,8 @@ h1, h2, h3, .display-font {
 .grid-bg {
     background-size: 40px 40px;
     background-image:
-    linear-gradient(to right, rgba(255, 158, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 158, 0, 0.05) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 158, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 158, 0, 0.05) 1px, transparent 1px);
 }
 
 /* Greyed out link style */
