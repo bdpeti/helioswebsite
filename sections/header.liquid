@@ -10,7 +10,7 @@
         </div>
         <div class="flex items-center space-x-4">
             <a href="{{ routes.cart_url }}" class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target text-white no-underline">
-                KOSÁR ({{ cart.item_count }})
+                {{ 'general.header.cart' | t }} ({{ cart.item_count }})
             </a>
         </div>
     </div>

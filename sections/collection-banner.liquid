@@ -14,7 +14,7 @@
             {{ collection.title }}
         </h1>
         <p class="font-mono text-[#FF9E00] uppercase tracking-widest mt-6 text-sm md:text-base">
-            {{ collection.products_count }} TERMÉK // {{ current_tags | join: ' + ' | default: 'MINDEN' }}
+            {{ 'collection.product_count' | t: count: collection.products_count }} // {{ current_tags | join: ' + ' | default: 'MINDEN' }}
         </p>
     </div>
 </div>

@@ -37,11 +37,11 @@
 
     <!-- Preloader -->
     <div id="preloader">
-        <h1 class="text-6xl md:text-9xl font-bold text-[#FF9E00] font-syne tracking-tighter">TÖLTÉS</h1>
+        <h1 class="text-6xl md:text-9xl font-bold text-[#FF9E00] font-syne tracking-tighter">{{ 'general.preloader.loading' | t }}</h1>
         <div class="w-64 h-1 bg-gray-800 mt-4 overflow-hidden">
             <div id="loader-bar" class="h-full bg-[#FF9E00] w-0 transition-all duration-300"></div>
         </div>
-        <p class="mt-2 text-xs text-[#CCFF00]">RENDSZER.INDÍTÁSA...</p>
+        <p class="mt-2 text-xs text-[#CCFF00]">{{ 'general.preloader.system_start' | t }}</p>
     </div>
 
     {% section 'header' %}

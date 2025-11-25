@@ -5,23 +5,23 @@
     <div class="container mx-auto px-6 md:px-12 relative z-10">
         <!-- Header -->
         <div class="text-center mb-16">
-            <h1 class="text-6xl md:text-9xl font-black font-syne uppercase leading-none mb-4 glitch-text" data-text="ACADEMY">ACADEMY</h1>
-            <p class="font-mono text-[#FF9E00] uppercase tracking-widest">MASTER THE FLOW</p>
+            <h1 class="text-6xl md:text-9xl font-black font-syne uppercase leading-none mb-4 glitch-text" data-text="{{ 'learn.title' | t }}">{{ 'learn.title' | t }}</h1>
+            <p class="font-mono text-[#FF9E00] uppercase tracking-widest">{{ 'learn.subtitle' | t }}</p>
         </div>
 
         <!-- Filters -->
         <div class="flex justify-center gap-4 mb-12 flex-wrap">
             <button class="filter-btn active px-6 py-2 border border-[#FF9E00] bg-[#FF9E00] text-black font-mono text-xs uppercase font-bold hover:bg-[#CCFF00] hover:border-[#CCFF00] transition-colors" data-filter="all">
-                MINDEN
+                {{ 'learn.filter_all' | t }}
             </button>
             <button class="filter-btn px-6 py-2 border border-white/20 text-white font-mono text-xs uppercase font-bold hover:border-[#FF9E00] hover:text-[#FF9E00] transition-colors" data-filter="beginner">
-                KEZDŐ
+                {{ 'learn.filter_beginner' | t }}
             </button>
             <button class="filter-btn px-6 py-2 border border-white/20 text-white font-mono text-xs uppercase font-bold hover:border-[#FF9E00] hover:text-[#FF9E00] transition-colors" data-filter="intermediate">
-                HALADÓ
+                {{ 'learn.filter_intermediate' | t }}
             </button>
             <button class="filter-btn px-6 py-2 border border-white/20 text-white font-mono text-xs uppercase font-bold hover:border-[#FF9E00] hover:text-[#FF9E00] transition-colors" data-filter="pro">
-                PRO
+                {{ 'learn.filter_pro' | t }}
             </button>
         </div>
 

@@ -1,10 +1,113 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin language editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
-{}
+{
+    "general": {
+        "preloader": {
+            "loading": "TÖLTÉS",
+            "system_start": "RENDSZER.INDÍTÁSA..."
+        },
+        "header": {
+            "cart": "KOSÁR"
+        },
+        "footer": {
+            "newsletter_title_html": "NE MARADJ LE <br>A <span class=\"text-[#FF9E00]\">KÖVETKEZŐ DROP-RÓL</span>",
+            "email_placeholder": "EMAIL CÍM...",
+            "submit": "KÜLDÉS",
+            "spam_notice": "NINCS SPAM. CSAK TŰZ. IRATKOZZ LE BÁRMIKOR.",
+            "shop": "BOLT",
+            "contact": "KAPCSOLAT",
+            "legal": "JOGI",
+            "privacy": "Adatvédelem",
+            "refund": "Visszatérítés",
+            "terms": "ÁSZF",
+            "rights_reserved": "MINDEN JOG FENNTARTVA.",
+            "designed_for": "GEN Z-NEK TERVEZVE // CODE: ORANGE"
+        }
+    },
+    "product": {
+        "new_drop": "ÚJ DROP",
+        "variant": "Változat",
+        "add_to_cart": "KOSÁRBA HELYEZÉS",
+        "tech_specs": "TECHNIKAI_ADATOK",
+        "wood": "FAANYAG",
+        "weight": "SÚLY",
+        "paint": "FESTÉS",
+        "shape": "FORMA",
+        "shipping_warranty": "Szállítás és Garancia",
+        "free_shipping": "INGYENES SZÁLLÍTÁS 20 000 FT FELETT.",
+        "money_back": "14 NAPOS VISSZAVÁSÁRLÁSI GARANCIA.",
+        "user_feedback": "FELHASZNÁLÓI_VISSZAJELZÉSEK.LOG",
+        "verified": "VERIFIED"
+    },
+    "collection": {
+        "product_count": "{{ count }} TERMÉK",
+        "filters": "SZŰRŐK",
+        "no_products": "Nincs találat a keresési feltételeknek megfelelően.",
+        "quick_add": "GYORS VÁSÁRLÁS",
+        "open_filters": "NYITÁS +",
+        "category": "KATEGÓRIA",
+        "wood": "FAANYAG",
+        "price": "ÁR",
+        "showing": "MUTATVA",
+        "sort_featured": "AJÁNLOTT",
+        "sort_price_asc": "ÁR: NÖVEKVŐ",
+        "sort_price_desc": "ÁR: CSÖKKENŐ",
+        "sort_newest": "LEGÚJABB",
+        "sale": "SALE",
+        "sold_out": "SOLD OUT"
+    },
+    "cart": {
+        "title": "KOSÁR",
+        "empty": "A KOSARAD ÜRES.",
+        "continue_shopping": "VÁSÁRLÁS FOLYTATÁSA",
+        "start_shopping": "VÁSÁRLÁS KEZDÉSE",
+        "total": "ÖSSZESEN",
+        "checkout": "FIZETÉS INDÍTÁSA",
+        "discount_code": "KUPON KÓD",
+        "apply": "BEVÁLTÁS",
+        "remove": "TÖRLÉS",
+        "discount_notice": "*A KEDVEZMÉNY A FIZETÉSNÉL KERÜL LEVONÁSRA.",
+        "taxes_shipping_notice": "ADÓK ÉS SZÁLLÍTÁS A PÉNZTÁRNÁL SZÁMOLVA."
+    },
+    "team": {
+        "title": "THE SQUAD",
+        "subtitle": "VÁLASSZ KARAKTERT",
+        "members_count": "CSAPAT_TAGOK [{{ count }}]",
+        "style": "STÍLUS",
+        "experience": "TAPASZTALAT",
+        "signature_trick": "SIGNATURE TRICK",
+        "check_setup": "NÉZD MEG A SZETTJÉT",
+        "buy": "VÁSÁRLÁS ->"
+    },
+    "learn": {
+        "title": "ACADEMY",
+        "subtitle": "MASTER THE FLOW",
+        "filter_all": "MINDEN",
+        "filter_beginner": "KEZDŐ",
+        "filter_intermediate": "HALADÓ",
+        "filter_pro": "PRO"
+    },
+    "blog": {
+        "title": "TRANSMISSION",
+        "subtitle": "INCOMING SIGNALS...",
+        "read_more": "OLVASÁS_",
+        "no_signals": "NO SIGNALS DETECTED."
+    },
+    "lab": {
+        "title": "THE LAB",
+        "subtitle": "ENGINEERING PERFECTION",
+        "loading_data": "ADATOK BETÖLTÉSE...",
+        "access_granted": "ACCESS GRANTED",
+        "material_science": "MATERIAL SCIENCE",
+        "blueprint_analysis": "BLUEPRINT_ANALYSIS_V2.0",
+        "scanning": "Scanning Bio-Data...",
+        "department": "R&D DEPARTMENT // ACCESS LEVEL 5",
+        "fig_1": "FIG. 1.0 // KEN SHAPE",
+        "scale": "SCALE 1:1",
+        "precision_engineering": "PRECISION ENGINEERING",
+        "analysis_1": "01. LOREM IPSUM ANALYSIS",
+        "analysis_2": "02. WEIGHT DISTRIBUTION",
+        "data_point": "DATA_POINT_0",
+        "optimization": "OPTIMIZATION",
+        "manifesto_1": "STREET DESIGNED.",
+        "manifesto_2": "PRO BUILT."
+    }
+}

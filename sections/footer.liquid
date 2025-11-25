@@ -6,22 +6,21 @@
     <div class="container mx-auto px-4 py-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-                <h3 class="text-3xl font-syne font-bold mb-6 uppercase">NE MARADJ LE <br>A <span
-                        class="text-[#FF9E00]">KÖVETKEZŐ DROP-RÓL</span></h3>
+                <h3 class="text-3xl font-syne font-bold mb-6 uppercase">{{ 'general.footer.newsletter_title_html' | t }}</h3>
                 {% form 'customer' %}
                     <div class="flex border-b border-white hover:border-[#FF9E00] transition-colors py-2">
-                        <input type="email" name="contact[email]" placeholder="EMAIL CÍM..."
+                        <input type="email" name="contact[email]" placeholder="{{ 'general.footer.email_placeholder' | t }}"
                             class="bg-transparent w-full outline-none font-mono text-sm placeholder-gray-600 uppercase cursor-none-target text-white">
                         <button type="submit"
-                            class="text-[#FF9E00] font-bold uppercase text-sm cursor-none-target hover:text-white">KÜLDÉS</button>
+                            class="text-[#FF9E00] font-bold uppercase text-sm cursor-none-target hover:text-white">{{ 'general.footer.submit' | t }}</button>
                     </div>
                 {% endform %}
-                <p class="mt-4 text-xs text-gray-500 font-mono">NINCS SPAM. CSAK TŰZ. IRATKOZZ LE BÁRMIKOR.</p>
+                <p class="mt-4 text-xs text-gray-500 font-mono">{{ 'general.footer.spam_notice' | t }}</p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 font-mono text-sm">
                 <ul>
-                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">BOLT</li>
+                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">{{ 'general.footer.shop' | t }}</li>
                     {% for link in linklists.footer.links %}
                         <li class="mb-2"><a href="{{ link.url }}"
                                 class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">{{ link.title }}</a>
@@ -29,7 +28,7 @@
                     {% endfor %}
                 </ul>
                 <ul>
-                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">KAPCSOLAT</li>
+                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">{{ 'general.footer.contact' | t }}</li>
                     <li class="mb-2"><a href="#"
                             class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Instagram</a>
                     </li>
@@ -41,15 +40,15 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">JOGI</li>
+                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">{{ 'general.footer.legal' | t }}</li>
                     <li class="mb-2"><a href="/policies/privacy-policy"
-                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Adatvédelem</a>
+                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">{{ 'general.footer.privacy' | t }}</a>
                     </li>
                     <li class="mb-2"><a href="/policies/refund-policy"
-                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Visszatérítés</a>
+                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">{{ 'general.footer.refund' | t }}</a>
                     </li>
                     <li class="mb-2"><a href="/policies/terms-of-service"
-                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">ÁSZF</a>
+                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">{{ 'general.footer.terms' | t }}</a>
                     </li>
                 </ul>
             </div>
@@ -57,8 +56,8 @@
 
         <div
             class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-mono uppercase">
-            <div>© {{ 'now' | date: "%Y" }} HELIOS KENDAMA. MINDEN JOG FENNTARTVA.</div>
-            <div class="mt-4 md:mt-0">GEN Z-NEK TERVEZVE // CODE: ORANGE</div>
+            <div>© {{ 'now' | date: "%Y" }} HELIOS KENDAMA. {{ 'general.footer.rights_reserved' | t }}</div>
+            <div class="mt-4 md:mt-0">{{ 'general.footer.designed_for' | t }}</div>
         </div>
     </div>
 

@@ -44,6 +44,115 @@
         "cart": {
             "view": "View my cart ({{ count }})",
             "item_added": "Item added to cart"
+        },
+        "preloader": {
+            "loading": "LOADING",
+            "system_start": "SYSTEM.START..."
+        },
+        "header": {
+            "cart": "CART"
+        },
+        "footer": {
+            "newsletter_title_html": "DON'T MISS <br>THE <span class=\"text-[#FF9E00]\">NEXT DROP</span>",
+            "email_placeholder": "EMAIL ADDRESS...",
+            "submit": "SUBMIT",
+            "spam_notice": "NO SPAM. JUST FIRE. UNSUBSCRIBE ANYTIME.",
+            "shop": "SHOP",
+            "contact": "CONTACT",
+            "legal": "LEGAL",
+            "privacy": "Privacy Policy",
+            "refund": "Refund Policy",
+            "terms": "Terms of Service",
+            "rights_reserved": "ALL RIGHTS RESERVED.",
+            "designed_for": "DESIGNED FOR GEN Z // CODE: ORANGE"
         }
+    },
+    "product": {
+        "new_drop": "NEW DROP",
+        "variant": "Variant",
+        "add_to_cart": "ADD TO CART",
+        "tech_specs": "TECH_SPECS",
+        "wood": "WOOD",
+        "weight": "WEIGHT",
+        "paint": "PAINT",
+        "shape": "SHAPE",
+        "shipping_warranty": "Shipping & Warranty",
+        "free_shipping": "FREE SHIPPING OVER 20 000 FT.",
+        "money_back": "14 DAY MONEY BACK GUARANTEE.",
+        "user_feedback": "USER_FEEDBACK.LOG",
+        "verified": "VERIFIED"
+    },
+    "collection": {
+        "product_count": "{{ count }} PRODUCTS",
+        "filters": "FILTERS",
+        "no_products": "No products found matching your search.",
+        "quick_add": "QUICK ADD",
+        "open_filters": "OPEN +",
+        "category": "CATEGORY",
+        "wood": "WOOD",
+        "price": "PRICE",
+        "showing": "SHOWING",
+        "sort_featured": "FEATURED",
+        "sort_price_asc": "PRICE: LOW TO HIGH",
+        "sort_price_desc": "PRICE: HIGH TO LOW",
+        "sort_newest": "NEWEST",
+        "sale": "SALE",
+        "sold_out": "SOLD OUT"
+    },
+    "cart": {
+        "title": "CART",
+        "empty": "YOUR CART IS EMPTY.",
+        "continue_shopping": "CONTINUE SHOPPING",
+        "start_shopping": "START SHOPPING",
+        "total": "TOTAL",
+        "checkout": "CHECKOUT",
+        "discount_code": "DISCOUNT CODE",
+        "apply": "APPLY",
+        "remove": "REMOVE",
+        "discount_notice": "*DISCOUNT CALCULATED AT CHECKOUT.",
+        "taxes_shipping_notice": "TAXES AND SHIPPING CALCULATED AT CHECKOUT."
+    },
+    "team": {
+        "title": "THE SQUAD",
+        "subtitle": "CHOOSE YOUR CHARACTER",
+        "members_count": "TEAM_MEMBERS [{{ count }}]",
+        "style": "STYLE",
+        "experience": "EXPERIENCE",
+        "signature_trick": "SIGNATURE TRICK",
+        "check_setup": "CHECK SETUP",
+        "buy": "BUY ->"
+    },
+    "learn": {
+        "title": "ACADEMY",
+        "subtitle": "MASTER THE FLOW",
+        "filter_all": "ALL",
+        "filter_beginner": "BEGINNER",
+        "filter_intermediate": "INTERMEDIATE",
+        "filter_pro": "PRO"
+    },
+    "blog": {
+        "title": "TRANSMISSION",
+        "subtitle": "INCOMING SIGNALS...",
+        "read_more": "READ_",
+        "no_signals": "NO SIGNALS DETECTED."
+    },
+    "lab": {
+        "title": "THE LAB",
+        "subtitle": "ENGINEERING PERFECTION",
+        "loading_data": "LOADING DATA...",
+        "access_granted": "ACCESS GRANTED",
+        "material_science": "MATERIAL SCIENCE",
+        "blueprint_analysis": "BLUEPRINT_ANALYSIS_V2.0",
+        "scanning": "Scanning Bio-Data...",
+        "department": "R&D DEPARTMENT // ACCESS LEVEL 5",
+        "fig_1": "FIG. 1.0 // KEN SHAPE",
+        "scale": "SCALE 1:1",
+        "precision_engineering": "PRECISION ENGINEERING",
+        "analysis_1": "01. LOREM IPSUM ANALYSIS",
+        "analysis_2": "02. WEIGHT DISTRIBUTION",
+        "data_point": "DATA_POINT_0",
+        "optimization": "OPTIMIZATION",
+        "manifesto_1": "STREET DESIGNED.",
+        "manifesto_2": "PRO BUILT."
     }
 }
