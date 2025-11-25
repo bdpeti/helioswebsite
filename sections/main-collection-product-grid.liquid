@@ -69,67 +69,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-white/20 border border-white/20">
                 {% for product in collection.products %}
-                    <div class="bg-[#050406] p-6 group relative overflow-hidden hover:z-10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,158,0,0.1)]">
-                        <!-- Badges -->
-                        <div class="absolute top-4 left-4 z-20 flex gap-2">
-                            {% if product.compare_at_price > product.price %}
-                                <span class="bg-[#CCFF00] text-black text-xs px-2 py-1 font-bold font-mono">{{ 'collection.sale' | t }}</span>
-                            {% endif %}
-                            {% unless product.available %}
-                                <span class="bg-red-600 text-white text-xs px-2 py-1 font-bold font-mono">{{ 'collection.sold_out' | t }}</span>
-                            {% endunless %}
-                        </div>
-
-                        <!-- Image Container -->
-                        <div class="aspect-[4/5] w-full bg-[#111] mb-6 relative overflow-hidden">
-                            <!-- Primary Image -->
-                            <img 
-                                src="{{ product.featured_image | image_url: width: 600 }}" 
-                                alt="{{ product.featured_image.alt }}"
-                                class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-                                loading="lazy"
-                            >
-                            <!-- Secondary Image (Hover) -->
-                            {% if product.images[1] %}
-                                <img 
-                                    src="{{ product.images[1] | image_url: width: 600 }}" 
-                                    alt="{{ product.images[1].alt }}"
-                                    class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-105"
-                                    loading="lazy"
-                                >
-                            {% else %}
-                                <div class="absolute inset-0 w-full h-full bg-[#FF9E00] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                            {% endif %}
-
-                            <!-- Quick Add Button -->
-                            <div class="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <form method="post" action="/cart/add">
-                                    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                                    <button type="submit" class="w-full bg-[#FF9E00] text-black py-3 font-bold uppercase text-xs hover:bg-white transition-colors cursor-none-target">
-                                        {{ 'collection.quick_add' | t }}
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- Details -->
-                        <div>
-                            <h3 class="font-syne font-bold text-xl uppercase mb-1 group-hover:text-[#FF9E00] transition-colors">
-                                <a href="{{ product.url }}" class="no-underline text-inherit">
-                                    {{ product.title }}
-                                </a>
-                            </h3>
-                            <div class="flex justify-between items-end">
-                                <p class="font-mono text-xs text-gray-500">{{ product.type }}</p>
-                                <div class="text-right">
-                                    {% if product.compare_at_price > product.price %}
-                                        <span class="font-mono text-xs text-gray-500 line-through block">{{ product.compare_at_price | money }}</span>
-                                    {% endif %}
-                                    <span class="font-mono font-bold text-[#FF9E00]">{{ product.price | money }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% render 'product-card', product: product %}
                 {% else %}
                     <!-- Empty State -->
                     <div class="col-span-full py-20 text-center">

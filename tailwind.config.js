@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#FF9E00',
-        'bg': '#050406',
-        'accent': '#CCFF00',
+        'primary': 'var(--color-primary)',
+        'bg': 'var(--color-bg)',
+        'accent': 'var(--color-accent)',
         'mid': '#FF8603',
         'deep': '#FF6E07',
-        'white': '#f0f0f0',
+        'white': 'var(--color-text)',
       },
       fontFamily: {
         'mono': ['"Space Mono"', 'monospace'],

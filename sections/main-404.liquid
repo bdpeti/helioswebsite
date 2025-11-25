@@ -1,17 +1,16 @@
-<div class="min-h-screen flex flex-col items-center justify-center bg-[#050406] text-[#f0f0f0] relative overflow-hidden">
-  <div class="absolute inset-0 bg-[url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3R5eXJ6a3R5eXJ6a3R5eXJ6a3R5eXJ6a3R5eXJ6a3R5eXJ6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qE1YN7aQfVUTtW0/giphy.gif')] opacity-10 mix-blend-screen pointer-events-none"></div>
-  
-  <h1 class="text-[20vw] font-black font-syne leading-none text-[#FF9E00] glitch-text" data-text="404">404</h1>
-  <p class="font-mono text-xl uppercase tracking-widest mb-8">SIGNAL LOST // RENDSZER HIBA</p>
-  
-  <a href="{{ routes.root_url }}" class="bg-[#FF9E00] text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-[#CCFF00] transition-colors cursor-none-target">
-    VISSZA A BÁZISRA
-  </a>
+<div class="min-h-screen bg-[#050406] text-[#f0f0f0] flex items-center justify-center">
+  <div class="text-center">
+    <h1 class="text-[10rem] font-black font-syne text-[#FF9E00] leading-none mb-4">404</h1>
+    <p class="font-mono text-xl mb-8">{{ 'general.404.subtext' | t }}</p>
+    <a href="{{ routes.root_url }}" class="bg-[#FF9E00] text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-[#CCFF00] transition-colors cursor-none-target inline-block">
+      {{ 'general.404.link' | t }}
+    </a>
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "404",
+  "name": "404 Page",
   "settings": []
 }
 {% endschema %}

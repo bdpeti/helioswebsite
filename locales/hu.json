@@ -20,6 +20,37 @@
             "terms": "ÁSZF",
             "rights_reserved": "MINDEN JOG FENNTARTVA.",
             "designed_for": "GEN Z-NEK TERVEZVE // CODE: ORANGE"
+        },
+        "search": {
+            "title": "KERESÉS",
+            "placeholder": "KERESÉS...",
+            "submit": "KERESÉS",
+            "results_with_count": "{{ count }} TALÁLAT A KÖVETKEZŐRE: \"{{ terms }}\"",
+            "no_results": "NINCS TALÁLAT."
+        },
+        "404": {
+            "subtext": "AZ OLDAL NEM TALÁLHATÓ.",
+            "link": "VISSZA A FŐOLDALRA"
+        },
+        "collections": {
+            "title": "KOLLEKCIÓK"
+        },
+        "password_page": {
+            "opening_soon": "HAMAROSAN NYITUNK",
+            "login_form_password_label": "Jelszó",
+            "login_form_password_placeholder": "JELSZÓ",
+            "admin_link_html": "ADMIN BELÉPÉS <a href=\"/admin\" class=\"text-white hover:text-[#FF9E00]\">ITT</a>"
+        },
+        "accessibility": {
+            "skip_to_text": "UGRÁS A TARTALOMRA"
+        }
+    },
+    "gift_cards": {
+        "issued": {
+            "title": "AJÁNDÉKKÁRTYA: {{ value }}",
+            "subtext": "AZ AJÁNDÉKKÁRTYÁD",
+            "redeem": "HASZNÁLD EZT A KÓDOT A FIZETÉSNÉL.",
+            "shop_link": "VÁSÁRLÁS"
         }
     },
     "product": {

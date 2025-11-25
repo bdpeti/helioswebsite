@@ -25,9 +25,30 @@
     <!-- Vite Built Assets -->
     {{ 'style.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'main.js' | asset_url }}" defer="defer" type="module"></script>
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    <style>
+      :root {
+        --color-primary: {{ settings.color_primary }};
+        --color-bg: {{ settings.color_bg }};
+        --color-accent: {{ settings.color_accent }};
+        --color-text: {{ settings.color_text }};
+        --page-width: {{ settings.page_width }}px;
+      }
+    </style>
+
+    {% render 'meta-tags' %}
+    {% render 'structured-data' %}
   </head>
 
   <body class="antialiased selection:bg-[#FF9E00] selection:text-black">
+    <a class="skip-to-content-link sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:bg-[#FF9E00] focus:text-black focus:p-4 focus:font-bold focus:uppercase" href="#MainContent">
+      {{ "accessibility.skip_to_text" | t }}
+    </a>
+
     <!-- Custom Cursor Elements -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>

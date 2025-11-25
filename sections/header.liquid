@@ -9,8 +9,9 @@
             {% endfor %}
         </div>
         <div class="flex items-center space-x-4">
-            <a href="{{ routes.cart_url }}" class="uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target text-white no-underline">
-                {{ 'general.header.cart' | t }} ({{ cart.item_count }})
+            <a href="{{ routes.cart_url }}" class="flex items-center gap-2 uppercase text-xs border border-[#FF9E00] px-4 py-2 hover:bg-[#FF9E00] hover:text-black transition-all cursor-none-target text-white no-underline">
+                {% render 'icon-cart' %}
+                <span>{{ 'general.header.cart' | t }} ({{ cart.item_count }})</span>
             </a>
         </div>
     </div>

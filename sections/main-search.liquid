@@ -1,0 +1,48 @@
+<div class="min-h-screen bg-[#050406] text-[#f0f0f0] pb-20 pt-32">
+  <div class="container mx-auto px-6 md:px-12">
+    <h1 class="text-6xl font-black font-syne uppercase mb-12 text-outline glitch-text" data-text="{{ 'general.search.title' | t }}">{{ 'general.search.title' | t }}</h1>
+
+    <div class="mb-12">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="flex border-b border-white/20 pb-4">
+        <input
+          type="search"
+          name="q"
+          value="{{ search.terms | escape }}"
+          placeholder="{{ 'general.search.placeholder' | t }}"
+          aria-label="{{ 'general.search.placeholder' | t }}"
+          class="w-full bg-transparent text-2xl font-mono text-white outline-none placeholder-gray-600"
+        >
+        <button type="submit" class="text-[#FF9E00] font-bold uppercase hover:text-white transition-colors">
+          {{ 'general.search.submit' | t }}
+        </button>
+      </form>
+    </div>
+
+    {% if search.performed %}
+      <div class="mb-8 font-mono text-sm text-gray-400">
+        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+      </div>
+
+      {% if search.results_count == 0 %}
+        <div class="py-20 text-center border border-white/10 bg-[#111]">
+            <p class="font-mono text-gray-500">{{ 'general.search.no_results' | t }}</p>
+        </div>
+      {% else %}
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-white/20 border border-white/20">
+          {% for item in search.results %}
+            {% if item.object_type == 'product' %}
+              {% render 'product-card', product: item %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Search Results",
+  "settings": []
+}
+{% endschema %}

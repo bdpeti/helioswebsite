@@ -10,6 +10,7 @@
                 {% form 'customer' %}
                     <div class="flex border-b border-white hover:border-[#FF9E00] transition-colors py-2">
                         <input type="email" name="contact[email]" placeholder="{{ 'general.footer.email_placeholder' | t }}"
+                            aria-label="{{ 'general.footer.email_placeholder' | t }}"
                             class="bg-transparent w-full outline-none font-mono text-sm placeholder-gray-600 uppercase cursor-none-target text-white">
                         <button type="submit"
                             class="text-[#FF9E00] font-bold uppercase text-sm cursor-none-target hover:text-white">{{ 'general.footer.submit' | t }}</button>

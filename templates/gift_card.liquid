@@ -1,0 +1,55 @@
+{% layout none %}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ 'gift_cards.issued.title' | t: value: formatted_initial_value, shop: shop.name }}</title>
+    <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
+  </head>
+  <body class="bg-[#050406] text-white min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full border border-white/20 bg-[#111] p-8 text-center relative overflow-hidden">
+        <!-- Glitch Effect -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-[#FF9E00]"></div>
+        
+        <h1 class="font-syne font-bold text-3xl uppercase mb-2">{{ shop.name }}</h1>
+        <div class="font-mono text-xs text-[#FF9E00] mb-8">{{ 'gift_cards.issued.subtext' | t }}</div>
+
+        <div class="text-6xl font-mono font-bold text-white mb-8">
+            {{ gift_card.initial_value | money_without_trailing_zeros }}
+        </div>
+
+        <div class="bg-white p-4 mb-8 inline-block">
+            <div id="qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
+        </div>
+
+        <div class="mb-8">
+            <input 
+                type="text" 
+                class="bg-black border border-white/20 text-center text-white font-mono p-4 w-full outline-none focus:border-[#FF9E00]" 
+                value="{{ gift_card.code | format_code }}" 
+                readonly
+                onclick="this.select();"
+            >
+        </div>
+
+        <p class="font-mono text-xs text-gray-500 mb-8">
+            {{ 'gift_cards.issued.redeem' | t }}
+        </p>
+
+        <a href="{{ shop.url }}" class="block w-full bg-[#FF9E00] text-black py-4 font-bold uppercase hover:bg-white transition-colors">
+            {{ 'gift_cards.issued.shop_link' | t }}
+        </a>
+    </div>
+
+    <script>
+      new QRCode(document.getElementById('qr-code'), {
+        text: '{{ gift_card.qr_identifier }}',
+        width: 120,
+        height: 120
+      });
+    </script>
+  </body>
+</html>
