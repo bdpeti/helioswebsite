@@ -1,4 +1,4 @@
-<div class="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#050406] border-b border-white/20">
+<div class="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-[#050406] border-b border-white/20">
     <!-- Background Image -->
     <div class="absolute inset-0 opacity-40">
         {% if collection.image %}
@@ -9,11 +9,11 @@
     </div>
     
     <!-- Content -->
-    <div class="relative z-10 text-center">
-        <h1 class="text-6xl md:text-9xl font-black font-syne uppercase text-white glitch-text" data-text="{{ collection.title }}">
+    <div class="relative z-10 text-center px-4">
+        <h1 class="text-5xl md:text-8xl lg:text-9xl font-black font-syne uppercase text-white glitch-text leading-none tracking-tighter" data-text="{{ collection.title }}">
             {{ collection.title }}
         </h1>
-        <p class="font-mono text-[#FF9E00] uppercase tracking-widest mt-4">
+        <p class="font-mono text-[#FF9E00] uppercase tracking-widest mt-6 text-sm md:text-base">
             {{ collection.products_count }} TERMÉK // {{ current_tags | join: ' + ' | default: 'MINDEN' }}
         </p>
     </div>

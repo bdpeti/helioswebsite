@@ -1,4 +1,4 @@
-<footer class="mt-20 border-t border-white/20 bg-[#0a0a0a] relative overflow-hidden">
+<footer class="mt-20 border-t border-white/20 bg-[#0a0a0a] relative overflow-hidden pb-safe">
     <div
         class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF9E00] to-transparent opacity-5 pointer-events-none">
     </div>
@@ -19,7 +19,7 @@
                 <p class="mt-4 text-xs text-gray-500 font-mono">NINCS SPAM. CSAK TŰZ. IRATKOZZ LE BÁRMIKOR.</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-8 font-mono text-sm">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 font-mono text-sm">
                 <ul>
                     <li class="mb-4 text-[#FF9E00] font-bold uppercase">BOLT</li>
                     {% for link in linklists.footer.links %}
@@ -38,6 +38,18 @@
                     </li>
                     <li class="mb-2"><a href="#"
                             class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Discord</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="mb-4 text-[#FF9E00] font-bold uppercase">JOGI</li>
+                    <li class="mb-2"><a href="/policies/privacy-policy"
+                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Adatvédelem</a>
+                    </li>
+                    <li class="mb-2"><a href="/policies/refund-policy"
+                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">Visszatérítés</a>
+                    </li>
+                    <li class="mb-2"><a href="/policies/terms-of-service"
+                            class="hover:text-white text-gray-400 cursor-none-target hover:pl-2 transition-all">ÁSZF</a>
                     </li>
                 </ul>
             </div>

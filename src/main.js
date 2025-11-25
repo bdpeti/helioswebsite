@@ -40,12 +40,18 @@ window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
 
     if (loaderBar && preloader) {
-        setTimeout(() => { loaderBar.style.width = '50%'; }, 200);
-        setTimeout(() => { loaderBar.style.width = '100%'; }, 800);
+        // Check if already visited in this session
+        if (sessionStorage.getItem('visited')) {
+            preloader.style.display = 'none';
+        } else {
+            sessionStorage.setItem('visited', 'true');
+            setTimeout(() => { loaderBar.style.width = '50%'; }, 200);
+            setTimeout(() => { loaderBar.style.width = '100%'; }, 800);
 
-        setTimeout(() => {
-            preloader.style.transform = 'translateY(-100%)';
-        }, 1200);
+            setTimeout(() => {
+                preloader.style.transform = 'translateY(-100%)';
+            }, 1200);
+        }
     }
 });
 

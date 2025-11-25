@@ -1,0 +1,91 @@
+<div class="min-h-screen bg-[#050406] text-[#f0f0f0] pt-32 pb-20 relative overflow-hidden" id="blog-container">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+    
+    <div class="container mx-auto px-6 md:px-12 relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-6xl md:text-9xl font-black font-syne uppercase leading-none mb-4 glitch-text" data-text="TRANSMISSION">TRANSMISSION</h1>
+            <p class="font-mono text-[#FF9E00] uppercase tracking-widest">INCOMING SIGNALS...</p>
+        </div>
+
+        <!-- Terminal Interface -->
+        <div class="max-w-4xl mx-auto border border-white/20 bg-[#0a0a0a] p-2 md:p-4 relative">
+            <!-- Terminal Header -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-4 px-2">
+                <div class="flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="font-mono text-xs text-gray-500">root@helios-server:~</div>
+            </div>
+
+            <!-- Feed -->
+            <div class="space-y-8 p-2 md:p-4 font-mono">
+                {% for article in blog.articles %}
+                    <div class="group relative pl-6 border-l border-white/10 hover:border-[#FF9E00] transition-colors duration-300">
+                        <!-- Timestamp -->
+                        <div class="absolute -left-[5px] top-0 w-2 h-2 bg-[#FF9E00] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        
+                        <div class="text-xs text-gray-500 mb-2 flex items-center gap-2">
+                            <span class="text-[#FF9E00]">></span>
+                            <span>{{ article.published_at | date: "%Y.%m.%d" }}</span>
+                            <span class="text-gray-700">//</span>
+                            <span>{{ article.author }}</span>
+                        </div>
+
+                        <h2 class="text-2xl md:text-3xl font-bold uppercase mb-4 group-hover:text-[#FF9E00] transition-colors">
+                            <a href="{{ article.url }}">{{ article.title }}</a>
+                        </h2>
+
+                        {% if article.image %}
+                            <div class="mb-4 overflow-hidden border border-white/10 aspect-video relative">
+                                <img src="{{ article.image | image_url: width: 800 }}" alt="{{ article.title }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                                <div class="absolute inset-0 bg-[#FF9E00] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            </div>
+                        {% endif %}
+
+                        <div class="text-sm text-gray-400 leading-relaxed mb-4">
+                            {{ article.excerpt_or_content | strip_html | truncatewords: 30 }}
+                        </div>
+
+                        <a href="{{ article.url }}" class="inline-block text-xs uppercase border border-white/20 px-4 py-2 hover:bg-[#FF9E00] hover:text-black hover:border-[#FF9E00] transition-all cursor-none-target">
+                            OLVASÁS_
+                        </a>
+                    </div>
+                {% else %}
+                    <!-- Empty State / Placeholder -->
+                    <div class="text-center py-12">
+                        <p class="text-gray-500">NO SIGNALS DETECTED.</p>
+                    </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Terminal Cursor -->
+            <div class="mt-8 px-2 md:px-4 flex items-center gap-2 text-[#FF9E00] animate-pulse">
+                <span>></span>
+                <span class="w-3 h-5 bg-[#FF9E00]"></span>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        {% if paginate.pages > 1 %}
+            <div class="mt-12 flex justify-center gap-2 font-mono text-sm">
+                {{ paginate | default_pagination }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blog Feed",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Blog Feed"
+    }
+  ]
+}
+{% endschema %}

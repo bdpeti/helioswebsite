@@ -1,5 +1,5 @@
-<div class="min-h-screen pt-24 pb-12 bg-[#050406] text-[#f0f0f0]">
-  <div class="container mx-auto px-4">
+<div class="min-h-screen pt-32 pb-20 bg-[#050406] text-[#f0f0f0]">
+  <div class="container mx-auto px-6 md:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
       
       <!-- Product Images (Left - 7 cols) -->
@@ -72,38 +72,25 @@
           <!-- Dynamic Blocks -->
           {% for block in section.blocks %}
             {% case block.type %}
-                {% when 'play_button' %}
-                    <div class="py-4" {{ block.shopify_attributes }}>
-                        <a href="{{ block.settings.audio_url | default: '#' }}" class="flex items-center gap-4 group cursor-none-target w-full border border-white/20 p-4 hover:bg-white/5 transition-colors">
-                            <div class="w-12 h-12 bg-[#FF9E00] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform text-black">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                            </div>
-                            <div>
-                                <div class="font-syne font-bold uppercase text-lg">{{ block.settings.label }}</div>
-                                <div class="font-mono text-xs text-gray-500">HANGMINTA LEJÁTSZÁSA</div>
-                            </div>
-                        </a>
-                    </div>
-
                 {% when 'tech_specs' %}
                     <div class="border border-white/20 p-4 bg-[#111]" {{ block.shopify_attributes }}>
                         <h4 class="font-mono text-[#CCFF00] text-xs uppercase mb-4 border-b border-white/10 pb-2">TECHNIKAI_ADATOK</h4>
-                        <div class="grid grid-cols-2 gap-4 text-sm font-mono">
+                        <div class="grid grid-cols-2 gap-6 text-sm font-mono">
                             <div>
-                                <span class="text-gray-500 block text-xs">FAANYAG</span>
-                                <span class="text-white">{{ block.settings.wood_type }}</span>
+                                <span class="text-gray-500 block text-xs mb-2 uppercase tracking-wider">FAANYAG</span>
+                                <span class="text-white font-bold">{{ block.settings.wood_type }}</span>
                             </div>
                             <div>
-                                <span class="text-gray-500 block text-xs">SÚLY</span>
-                                <span class="text-white">{{ block.settings.weight }}</span>
+                                <span class="text-gray-500 block text-xs mb-2 uppercase tracking-wider">SÚLY</span>
+                                <span class="text-white font-bold">{{ block.settings.weight }}</span>
                             </div>
                             <div>
-                                <span class="text-gray-500 block text-xs">FESTÉS</span>
-                                <span class="text-white">{{ block.settings.paint_type }}</span>
+                                <span class="text-gray-500 block text-xs mb-2 uppercase tracking-wider">FESTÉS</span>
+                                <span class="text-white font-bold">{{ block.settings.paint_type }}</span>
                             </div>
                             <div>
-                                <span class="text-gray-500 block text-xs">FORMA</span>
-                                <span class="text-white">{{ block.settings.shape }}</span>
+                                <span class="text-gray-500 block text-xs mb-2 uppercase tracking-wider">FORMA</span>
+                                <span class="text-white font-bold">{{ block.settings.shape }}</span>
                             </div>
                         </div>
                     </div>
@@ -216,24 +203,6 @@
           "id": "shape",
           "label": "Shape",
           "default": "Helios V2"
-        }
-      ]
-    },
-    {
-      "type": "play_button",
-      "name": "Play Button",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "label",
-          "label": "Label",
-          "default": "HALLGASD MEG A POP-OT"
-        },
-        {
-          "type": "url",
-          "id": "audio_url",
-          "label": "Audio/Video Link"
         }
       ]
     },

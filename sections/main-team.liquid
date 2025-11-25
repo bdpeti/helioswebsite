@@ -1,0 +1,225 @@
+<div class="min-h-screen bg-[#050406] text-[#f0f0f0] pt-32 pb-20 relative overflow-hidden" id="team-container">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF9E00] to-transparent opacity-5 pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 md:px-12 relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-6xl md:text-9xl font-black font-syne uppercase leading-none mb-4 glitch-text" data-text="THE SQUAD">THE SQUAD</h1>
+            <p class="font-mono text-[#FF9E00] uppercase tracking-widest">VÁLASSZ KARAKTERT</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Character Stats / Info (Left) -->
+            <div class="lg:col-span-4 order-2 lg:order-1 space-y-8">
+                <div class="border border-white/20 p-6 bg-[#0a0a0a] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-2 opacity-50">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF9E00" stroke-width="2"><path d="M2 2h20v20H2z"/><path d="M2 2l20 20"/><path d="M22 2L2 22"/></svg>
+                    </div>
+                    
+                    <h2 class="text-4xl font-syne font-bold uppercase mb-2 text-[#FF9E00]" id="player-name">PLAYER_NAME</h2>
+                    <p class="font-mono text-sm text-gray-400 mb-6" id="player-role">PRO TEAM // HUNGARY</p>
+
+                    <div class="space-y-4 font-mono text-sm">
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-500">STÍLUS</span><span class="text-white" id="player-style">TECH / FLOW</span></div>
+                            <div class="h-1 bg-gray-800"><div class="h-full bg-[#FF9E00]" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-500">TAPASZTALAT</span><span class="text-white" id="player-exp">8 ÉV</span></div>
+                            <div class="h-1 bg-gray-800"><div class="h-full bg-[#CCFF00]" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-500">SIGNATURE TRICK</span></div>
+                            <div class="text-[#FF9E00] uppercase" id="player-trick">TRIPLE LUNAR FLIP</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-white/10">
+                        <p class="font-mono text-xs text-gray-400 leading-relaxed" id="player-bio">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. A flow mestere, aki a lehetetlen trükköket is lazán beadja.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Setup Link -->
+                <a href="#" id="player-link" class="block border border-[#FF9E00] p-4 text-center hover:bg-[#FF9E00] hover:text-black transition-colors group cursor-none-target">
+                    <span class="font-syne font-bold uppercase text-xl">NÉZD MEG A SZETTJÉT</span>
+                    <span class="block font-mono text-xs mt-1 opacity-70 group-hover:opacity-100">VÁSÁRLÁS -></span>
+                </a>
+            </div>
+
+            <!-- Character Visual (Center) -->
+            <div class="lg:col-span-4 order-1 lg:order-2 flex justify-center items-center relative h-[500px] lg:h-[600px]">
+                <!-- Rotating Platform -->
+                <div class="absolute bottom-0 w-64 h-12 bg-[#FF9E00]/20 rounded-[100%] blur-xl animate-pulse"></div>
+                
+                <!-- Player Image -->
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                     id="player-image"
+                     class="h-full object-contain drop-shadow-[0_0_15px_rgba(255,158,0,0.3)] transition-all duration-500 hover:scale-105 grayscale hover:grayscale-0"
+                     alt="Player">
+            </div>
+
+            <!-- Character Select Grid (Right) -->
+            <div class="lg:col-span-4 order-3 space-y-4">
+                <h3 class="font-mono text-xs text-gray-500 uppercase mb-4 text-right">CSAPAT_TAGOK [4]</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    {% for block in section.blocks %}
+                        <div class="player-card border border-white/20 bg-[#0a0a0a] aspect-square relative cursor-none-target group hover:border-[#FF9E00] transition-colors"
+                             data-name="{{ block.settings.name }}"
+                             data-role="{{ block.settings.role }}"
+                             data-style="{{ block.settings.style }}"
+                             data-exp="{{ block.settings.exp }}"
+                             data-trick="{{ block.settings.trick }}"
+                             data-bio="{{ block.settings.bio }}"
+                             data-image="{{ block.settings.image | image_url: width: 800 }}"
+                             data-link="{{ block.settings.product_url }}">
+                            
+                            {% if block.settings.image %}
+                                {{ block.settings.image | image_url: width: 400 | image_tag: class: 'w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity grayscale' }}
+                            {% else %}
+                                <div class="w-full h-full bg-[#111] flex items-center justify-center">
+                                    <span class="font-syne font-bold text-2xl text-gray-700 group-hover:text-[#FF9E00]">{{ forloop.index }}</span>
+                                </div>
+                            {% endif %}
+                            
+                            <div class="absolute bottom-0 left-0 w-full bg-black/80 p-2 backdrop-blur-sm">
+                                <div class="font-mono text-xs text-white uppercase">{{ block.settings.name }}</div>
+                            </div>
+                            
+                            <!-- Active Indicator -->
+                            <div class="absolute top-2 right-2 w-2 h-2 bg-[#FF9E00] rounded-full opacity-0 active-indicator transition-opacity"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.player-card');
+    const nameEl = document.getElementById('player-name');
+    const roleEl = document.getElementById('player-role');
+    const styleEl = document.getElementById('player-style');
+    const expEl = document.getElementById('player-exp');
+    const trickEl = document.getElementById('player-trick');
+    const bioEl = document.getElementById('player-bio');
+    const imgEl = document.getElementById('player-image');
+    const linkEl = document.getElementById('player-link');
+
+    if (cards.length > 0) {
+        // Select first player by default
+        updatePlayer(cards[0]);
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => updatePlayer(card));
+    });
+
+    function updatePlayer(card) {
+        // Update Active State
+        cards.forEach(c => {
+            c.classList.remove('border-[#FF9E00]');
+            c.querySelector('.active-indicator').style.opacity = '0';
+        });
+        card.classList.add('border-[#FF9E00]');
+        card.querySelector('.active-indicator').style.opacity = '1';
+
+        // Update Content with Glitch Effect
+        nameEl.innerText = card.dataset.name;
+        nameEl.setAttribute('data-text', card.dataset.name);
+        roleEl.innerText = card.dataset.role;
+        styleEl.innerText = card.dataset.style;
+        expEl.innerText = card.dataset.exp;
+        trickEl.innerText = card.dataset.trick;
+        bioEl.innerText = card.dataset.bio;
+        
+        // Image Transition
+        imgEl.style.opacity = '0';
+        imgEl.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            if (card.dataset.image) imgEl.src = card.dataset.image;
+            imgEl.style.opacity = '1';
+            imgEl.style.transform = 'scale(1)';
+        }, 300);
+
+        // Link
+        if (card.dataset.link) {
+            linkEl.href = card.dataset.link;
+            linkEl.style.display = 'block';
+        } else {
+            linkEl.style.display = 'none';
+        }
+    }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Team",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "player",
+      "name": "Player",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Player Name"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role",
+          "default": "PRO TEAM"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "style",
+          "label": "Style",
+          "default": "Tech"
+        },
+        {
+          "type": "text",
+          "id": "exp",
+          "label": "Experience",
+          "default": "5 Years"
+        },
+        {
+          "type": "text",
+          "id": "trick",
+          "label": "Signature Trick",
+          "default": "Lunar"
+        },
+        {
+          "type": "textarea",
+          "id": "bio",
+          "label": "Bio",
+          "default": "Short bio here."
+        },
+        {
+          "type": "url",
+          "id": "product_url",
+          "label": "Pro Model Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Page"
+    }
+  ]
+}
+{% endschema %}

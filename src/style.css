@@ -44,7 +44,7 @@ h3,
 
 /* Utility Classes for Vibe */
 .text-outline {
-    -webkit-text-stroke: 1px var(--c-primary);
+    -webkit-text-stroke: 2px var(--c-primary);
     color: transparent;
     transition: all 0.3s ease;
 }
@@ -63,28 +63,48 @@ h3,
 }
 
 /* Custom Cursor */
-.cursor-dot,
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
+@media (hover: hover) and (pointer: fine) {
+
+    .cursor-dot,
+    .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+        display: block;
+    }
+
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--c-primary);
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--c-primary);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+    }
 }
 
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--c-primary);
+@media (hover: none) and (pointer: coarse) {
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
+    body {
+        cursor: auto;
+    }
 }
 
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--c-primary);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
+.pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Marquee Animation */
@@ -174,4 +194,25 @@ h3,
     cursor: not-allowed;
     text-decoration: line-through;
     pointer-events: none;
+}
+
+/* Animations */
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
